@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة المنارة</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d35400;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .facebook { background: #1877f2; color: white; }
+        .twitter { background: #1da1f2; color: white; }
+        .instagram { background: #e1306c; color: white; }
+        .whatsapp { background: #25d366; color: white; }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #d35400;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #b44200;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>مرحبًا بكم في مكتبة المنارة 📚</h1>
+        <p>نوفر لكم أحدث الكتب والمراجع العلمية والثقافية.</p>
+
+        <h2>تابعونا على:</h2>
+        <div class="social-links">
+            <a href="https://www.facebook.com" class="facebook">فيسبوك</a>
+            <a href="https://www.twitter.com" class="twitter">تويتر</a>
+            <a href="https://www.instagram.com" class="instagram">إنستجرام</a>
+            <a href="https://www.whatsapp.com" class="whatsapp">واتساب</a>
+        </div>
+
+        <h2>تواصل معنا:</h2>
+        <form class="contact-form" onsubmit="sendMessage(event)">
+            <input type="text" id="name" placeholder="الاسم" required>
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            <textarea id="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+
+        <p id="response-message" style="color: green; font-weight: bold; display: none;">تم إرسال رسالتك بنجاح!</p>
+    </div>
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+            document.getElementById("response-message").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("response-message").style.display = "none";
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
